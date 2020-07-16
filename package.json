@@ -7,7 +7,7 @@
   "scripts": {
     "lint": "tslint -p tsconfig.json \"src/**/*.ts\"",
     "build": "rollup -c",
-    "push-main": "rollup -c --environment DEST:main",
+    "push-main": "rollup -c && grunt",
     "push-pserver": "rollup -c --environment DEST:pserver",
     "push-sim": "rollup -c --environment DEST:sim",
     "test": "npm run test-unit",
@@ -15,7 +15,8 @@
     "test-integration": "echo 'See docs/in-depth/testing.md for instructions on enabling integration tests'",
     "watch-main": "rollup -cw --environment DEST:main",
     "watch-pserver": "rollup -cw --environment DEST:pserver",
-    "watch-sim": "rollup -cw --environment DEST:sim"
+    "watch-sim": "rollup -cw --environment DEST:sim",
+    "console": "multimete"
   },
   "repository": {
     "type": "git",
@@ -42,6 +43,9 @@
     "@types/sinon": "^5.0.5",
     "@types/sinon-chai": "^3.2.0",
     "chai": "^4.2.0",
+    "grunt": "^1.2.1",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-screeps": "^1.4.0",
     "lodash": "^3.10.1",
     "mocha": "^5.2.0",
     "prettier": "^2.0.4",
@@ -51,6 +55,7 @@
     "rollup-plugin-nodent": "^0.2.2",
     "rollup-plugin-screeps": "^1.0.0",
     "rollup-plugin-typescript2": "^0.27.0",
+    "screeps-multimeter": "^1.9.0",
     "sinon": "^6.3.5",
     "sinon-chai": "^3.2.0",
     "ts-node": "^8.8.2",
